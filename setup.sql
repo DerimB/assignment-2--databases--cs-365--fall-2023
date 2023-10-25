@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS passwords_content (
     email VARCHAR(32) NOT NULL,
     password VARBINARY(256) NOT NULL,
     commment TEXT,
-    PRIMARY KEY (content_id)
+    PRIMARY KEY (content_id),
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
