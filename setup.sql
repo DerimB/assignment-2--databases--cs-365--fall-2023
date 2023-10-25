@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS passwords;
 
-CREATE DATABASE passwords;
+CREATE DATABASE passwords DEFAULT CHARACTER SET utf8mb4;;
 
 USE passwords;
 
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS passwords_content (
 );
 
 --Need to have 10 initial entries
-INSERT INTO passwords_content (website_name,website_url,first_name,last_name,username,email,password,commment) VALUES (
+INSERT INTO passwords_content VALUES (
     'MySQL',
     'https://www.mysql.com',
     'Derim',
