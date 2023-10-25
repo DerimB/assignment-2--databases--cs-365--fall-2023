@@ -1,6 +1,6 @@
 DROP DATABASE IF EXISTS passwords;
 
-CREATE DATABASE passwords DEFAULT CHARACTER SET utf8mb4;;
+CREATE DATABASE passwords DEFAULT CHARACTER SET utf8mb4;
 
 USE passwords;
 
@@ -12,13 +12,13 @@ CREATE TABLE IF NOT EXISTS passwords_content (
     username VARCHAR(64) NOT NULL,
     email VARCHAR(32) NOT NULL,
     password VARBINARY(256) NOT NULL,
-    commment TEXT,
+    comment TEXT,
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
     content_id INT AUTO_INCREMENT,
     PRIMARY KEY (content_id)
 );
 
---Need to have 10 initial entries
+
 INSERT INTO passwords_content VALUES (
     'MySQL',
     'https://www.mysql.com',
