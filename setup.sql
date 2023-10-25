@@ -5,7 +5,7 @@ CREATE DATABASE passwords DEFAULT CHARACTER SET utf8mb4;;
 USE passwords;
 
 CREATE TABLE IF NOT EXISTS passwords_content (
-    content_id INT AUTO_INCREMENT PRIMARY KEY,
+    content_id INT AUTO_INCREMENT,
     website_name VARCHAR(64) NOT NULL,
     website_url VARCHAR(256) NOT NULL,
     first_name VARCHAR(32) NOT NULL,
