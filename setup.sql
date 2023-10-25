@@ -5,7 +5,6 @@ CREATE DATABASE passwords DEFAULT CHARACTER SET utf8mb4;;
 USE passwords;
 
 CREATE TABLE IF NOT EXISTS passwords_content (
-    content_id INT AUTO_INCREMENT,
     website_name VARCHAR(64) NOT NULL,
     website_url VARCHAR(256) NOT NULL,
     first_name VARCHAR(32) NOT NULL,
@@ -14,8 +13,9 @@ CREATE TABLE IF NOT EXISTS passwords_content (
     email VARCHAR(32) NOT NULL,
     password VARBINARY(256) NOT NULL,
     commment TEXT,
-    PRIMARY KEY (content_id),
-    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    content_id INT AUTO_INCREMENT,
+    PRIMARY KEY (content_id)
 );
 
 --Need to have 10 initial entries
