@@ -15,7 +15,7 @@ INSERT INTO passwords_content (website_name,website_url,first_name,last_name,use
 SELECT CONVERT(AES_DECRYPT(password,@UNHEXEncryptionKey) USING utf8) 
 AS decrypted_password
 FROM passwords_content
-WHERE website_url = 'http://www.mysql.com';
+WHERE website_url = 'https://www.mysql.com';
 
 --Command to get all password-related data (password, and associated urls that have https)
 SELECT website_name, website_url, CONVERT(AES_DECRYPT(password,@UNHEXEncryptionKey) USING utf8) 
