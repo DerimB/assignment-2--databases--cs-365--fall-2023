@@ -34,11 +34,9 @@ SET password = AES_ENCRYPT('newChangedPassword',@UNHEXEncryptionKey)
 WHERE content_id = 1; --Not sure if im calling an int properly should it be 3, or (3), or  '3'?
 
 --Command to remove a URL
-UPDATE passwords_content
-SET website_url = ''
-WHERE content_id = 10;
+DELETE passwords_content
+WHERE website_url = 'http://www.hotpocket.com';
 
 --Command to remove a password
 UPDATE passwords_content
-SET password = ''
-WHERE content_id = 10;
+WHERE password = CONVERT(AES_DECRYPT(password,@UNHEXEncryptionKey) USING utf8) = 'LinSecretPW';

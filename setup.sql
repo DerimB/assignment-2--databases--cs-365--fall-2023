@@ -132,9 +132,3 @@ VALUES (
     'New account for Frank on the HotPocket website'
 )
 ;
-
-UPDATE passwords_content SET website_url = 'http://www.mysql.com' WHERE website_name = 'MySQL';
-
-SELECT timestamp FROM passwords_content WHERE website_name = 'MySQL';
-
-DELETE FROM passwords_content WHERE website_name = 'UselessWebsite';
