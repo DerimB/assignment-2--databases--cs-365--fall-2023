@@ -31,12 +31,12 @@ WHERE CONVERT(AES_DECRYPT(password,@UNHEXEncryptionKey) USING utf8) = 'mySQLPass
 --Command to change any password
 UPDATE passwords_content
 SET password = AES_ENCRYPT('newChangedPassword',@UNHEXEncryptionKey)
-WHERE content_id = 1; --Not sure if im calling an int properly should it be 3, or (3), or  '3'?
+WHERE content_id = 4; --Not sure if im calling an int properly should it be 3, or (3), or  '3'?
 
 --Command to remove a URL
-DELETE passwords_content
-WHERE website_url = 'http://www.hotpocket.com';
+DELETE FROM passwords_content
+WHERE website_url = 'http://www.fastfoodforme.com';
 
 --Command to remove a password
-UPDATE passwords_content
-WHERE password = CONVERT(AES_DECRYPT(password,@UNHEXEncryptionKey) USING utf8) = 'LinSecretPW';
+DELETE FROM passwords_content
+WHERE CONVERT(AES_DECRYPT(password,@UNHEXEncryptionKey) USING utf8) = 'DTay2003';
