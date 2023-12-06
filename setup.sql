@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS passwords;
+DROP DATABASE IF EXISTS student_passwords;
 
-CREATE DATABASE passwords DEFAULT CHARACTER SET utf8mb4;
+CREATE DATABASE student_passwords DEFAULT CHARACTER SET utf8mb4;
 
-USE passwords;
+USE student_passwords;
 
 SET @UNHEXEncryptionKey = UNHEX('EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE');
 
